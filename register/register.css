@@ -1,0 +1,135 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0d72b8;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: #0d72b8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left Section (Image) */
+.left-section {
+    flex: 1;
+    background: url('Green.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* Right Section (Form) */
+.right-section {
+    width: 50%;
+    background: #0d72b8;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Register button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+/* Google Signup Button */
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.google-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Login text */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

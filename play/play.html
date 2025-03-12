@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Game</title>
+    <link rel="stylesheet" href="play.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    
+    <!-- Back Button -->\][]
+    <button class="back-btn" id="back-btn">Back</button>
+    
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span>Score: <span id="score">0</span></span>
+        <span>Level: <span id="level">1</span></span>
+        <span>Progress: <span id="progress">1/10</span></span>
+    </div>
+    
+    <!-- Game Box -->
+    <div class="game-container">
+        
+        <!-- Timer Box -->
+        <div class="timer-box">
+            <span id="timer">60</span>
+        </div>
+        
+        <!-- Word Puzzle -->
+        <p class="word-puzzle" id="word-puzzle">Loading...</p>
+        
+        <!-- Input Box -->
+        <input type="text" id="answer" placeholder="Enter your answer">
+        
+        <!-- Hint Button -->
+        <button class="hint-btn" id="hint-btn">Hint</button>
+
+        <!-- Error/Time Up Message -->
+        <p id="error-msg" class="error-msg hidden"></p>
+        
+        <div class="button-group">
+            <button class="submit-btn" id="submit-btn">Submit</button>
+            <button class="close-btn" id="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Hints -->
+    <div id="hint-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Word Hint</h2>
+            <p id="hint-text">Loading definition...</p>
+        </div>
+    </div>
+
+    <!-- Modal for Banana Game -->
+    <div id="banana-modal" class="modal">
+        <div class="modal-content banana-content">
+            <span class="close">&times;</span>
+            <h2>Solve to Continue</h2>
+            <div id="banana-container">
+                <img id="banana-image" src="" alt="Banana Puzzle">
+                <input type="text" id="banana-answer" placeholder="Enter your answer">
+                <button id="banana-submit">Submit</button>
+                <p id="banana-result" class="hidden"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Configuration Script -->
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyAJHzjy-B8F133WC2Bp3P3LU9UP5mZFSpE",
+            authDomain: "se-game-dc697.firebaseapp.com",
+            projectId: "se-game-dc697",
+            storageBucket: "se-game-dc697.appspot.com",
+            messagingSenderId: "469363039216",
+            appId: "1:469363039216:web:2eea4a87692aa0857a5b35",
+            measurementId: "G-5S3RFQWND0"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        
+        // Get Firebase services
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+    </script>
+
+    <!-- Game Script -->
+    <script src="play.js"></script>
+</body>
+</html>

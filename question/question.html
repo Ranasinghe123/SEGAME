@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Puzzle Game</title>
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <div class="game-container">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <div class="header">
+            <span>Score: <span id="score">3</span></span>
+            <span>Level: <span id="level">1</span></span>
+            <span>Progress: <span id="progress">1/3</span></span>
+        </div>
+        <div class="game-box">
+            <div class="timer" id="timer">10</div> 
+            <img src="math.png" alt="Math Puzzle" class="puzzle-image">
+            <p id="errorMessage" class="error-message"></p>
+            <input type="text" id="userAnswer" placeholder="Type your answer">
+            <div class="buttons">
+                <button class="submit-button" onclick="checkAnswer()">Submit</button>
+                <button class="close-button" onclick="closeGame()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="question.js"></script>
+</body>
+</html>

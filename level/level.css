@@ -1,0 +1,77 @@
+/* Smooth gradient background animation */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-size: 200% 200%;
+    animation: gradientBG 5s infinite alternate;
+    margin: 0;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+}
+
+/* Container styles */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Level button styles */
+.level-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.level-btn {
+    padding: 15px 30px;
+    width: 400px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Unlocked button gradient */
+.unlocked {
+    background: linear-gradient(90deg, #34e89e, #0f3443);
+    box-shadow: 0px 4px 10px rgba(52, 232, 158, 0.5);
+}
+
+.unlocked:hover {
+    background: linear-gradient(90deg, #0f3443, #34e89e);
+    transform: scale(1.1);
+}
+
+/* Locked button gradient */
+.locked {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    box-shadow: 0px 4px 10px rgba(255, 65, 108, 0.5);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.locked:hover {
+    transform: scale(1.05);
+}

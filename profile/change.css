@@ -1,0 +1,95 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1E78B1; /* Blue background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Profile Container */
+.profile-container {
+    text-align: center;
+    width: 50%;
+}
+
+/* Profile Title */
+.profile-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Button Group */
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Save Button */
+.save-btn {
+    background-color: white;
+    color: #1E78B1;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background-color: #d9d9d9;
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cancel-btn:hover {
+    background-color: white;
+    color: black;
+}

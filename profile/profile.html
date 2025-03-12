@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <script src="profile.js" type="module" defer></script>
+</head>
+<body>
+    <div class="profile-container">
+        <h1 class="profile-title">Profile</h1>
+        <div class="profile-info">
+            <p><strong>Name</strong>: <span id="userName">Loading...</span></p>
+            <p><strong>Email</strong>: <span id="userEmail">Loading...</span></p>
+            <p><strong>Rank</strong>: <span id="userRank">Loading...</span></p>
+            <p><strong>Highscore</strong>: <span id="userHighscore">Loading...</span></p>
+        </div>
+
+        <div class="profile-actions">
+            <button class="edit-btn" onclick="editProfile()">Edit</button>
+            <button class="delete-btn" onclick="deleteProfile()">Delete</button>
+        </div>
+    </div>
+</body>
+</html>

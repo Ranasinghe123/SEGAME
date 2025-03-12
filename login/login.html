@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Quest - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAJHzjy-B8F133WC2Bp3P3LU9UP5mZFSpE",
+            authDomain: "se-game-dc697.firebaseapp.com",
+            projectId: "se-game-dc697",
+            storageBucket: "se-game-dc697.appspot.com",
+            messagingSenderId: "469363039216",
+            appId: "1:469363039216:web:2eea4a87692aa0857a5b35",
+            measurementId: "G-5S3RFQWND0"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+
+        // Handle Login Form Submission
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("loginform");
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value.trim();
+
+                if (!email || !password) {
+                    alert("Please enter both email and password.");
+                    return;
+                }
+
+                try {
+                    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                    const user = userCredential.user;
+
+                    alert(`Login successful! Welcome, ${user.email}`);
+
+                    // Redirect to main.html after successful login
+                    window.location.href = "../main/main.html";
+
+                } catch (error) {
+                    alert("Error: " + error.message);
+                }
+            });
+
+            // Google Login Function
+            window.googleLogin = async function () {
+                try {
+                    const result = await signInWithPopup(auth, provider);
+                    const user = result.user;
+
+                    alert(`Google Login successful! Welcome, ${user.displayName}`);
+
+                    // Redirect to main.html after successful Google login
+                    window.location.href = "../main/main.html";
+
+                } catch (error) {
+                    alert("Error: " + error.message);
+                }
+            };
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section"></div>
+        <div class="right-section">
+            <h2>Welcome Back!</h2>
+            <form id="loginform">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Google Login Button -->
+            <button type="button" class="google-btn" onclick="googleLogin()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
+                Log in with Google
+            </button>
+
+            <p>Do not have an account? <a href="../register/register.html">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>
