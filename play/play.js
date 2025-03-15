@@ -301,7 +301,7 @@ async function saveScore(userId, level, score) {
 
 // Go back to previous page
 function goBack() {
-    window.location.href = "../level/level.html";
+    window.location.href = "../main/main.html";
 }
 
 // Setup event listeners
