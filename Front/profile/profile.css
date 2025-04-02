@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1E78B1; /* Blue background */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    background: transparent;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.profile-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.profile-info span {
+    font-weight: normal;
+}
+
+.profile-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+.edit-btn {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: white;
+    color: #1E78B1;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #d9d9d9;
+}

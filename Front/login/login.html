@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section (Image) -->
+        <div class="left-section">
+            <img src="../images/rr.jpeg" alt="Game Preview">
+        </div>
+
+        <!-- Right Section (Login Form) -->
+        <div class="right-section">
+            <h2>Login</h2>
+            <form id="loginform">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>or</p>
+            <button class="google-btn" onclick="googleLogin()">
+                <img src="../images/rr2.png" alt="Google"> Login with Google
+            </button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="../register/register.html">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js" type="module"></script>
+</body>
+</html>

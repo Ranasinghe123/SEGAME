@@ -1,0 +1,99 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('1st\ screen\ \(5\).png') no-repeat center center/cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f3f0f0;
+    text-align: center;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 20px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    color: #293df1;
+}
+
+/* Leaderboard Container */
+.leaderboard {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Header Row for Leaderboard */
+.row {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1976D2;
+    color: white;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Entry Row for Leaderboard */
+.entry {
+    display: flex;
+    justify-content: space-between;
+    background: #2196F3;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Hover Effects */
+.row:hover,
+.entry:hover {
+    background: #1565C0;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .leaderboard {
+        width: 90%;
+    }
+
+    .row,
+    .entry {
+        font-size: 1rem;
+    }
+}

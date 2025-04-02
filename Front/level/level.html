@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Selection</title>
+    <link rel="stylesheet" href="level.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Select Your Level</h1>
+        <div class="level-list" id="level-list">
+            <!-- Levels will be dynamically generated here -->
+        </div>
+        <div class="user-info">
+            <p>Player Progress: <span id="user-progress">0/10</span> levels</p>
+            <button id="back-btn">Back to Main</button>
+        </div>
+    </div>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <script src="level.js"></script>
+</body>
+</html>
